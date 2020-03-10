@@ -8,6 +8,7 @@ let gratuity = function(bill){
   return bill * 0.2;
 };
 
+//Another way to assign a function called 'arrow function'
 // let gratuity = (bill) => {
 //   return bill * 0.2;
 // };
@@ -34,13 +35,13 @@ let getHand = function(){
 
 //3.Define two objects for two players. Each player has name and getHand() properties
 let playerOne = {
-  name: "One Player",
+  name: "Hansel",
   hand: "",
   wins: 0
 };
 
 let playerTwo = {
-  name: "Two Player",
+  name: "Gretel",
   hand: "",
   wins: 0
 };
