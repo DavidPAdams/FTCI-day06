@@ -36,13 +36,13 @@ let getHand = function(){
 };
 
 //3.Define two objects for two players. Each player has name and getHand() properties
-let playerOne = {
+let player1 = {
   name: "Hansel",
   hand: "",
   wins: 0
 };
 
-let playerTwo = {
+let player2 = {
   name: "Gretel",
   hand: "",
   wins: 0
@@ -140,14 +140,16 @@ let landscape = function() {
   let result = "";
 
   let flat = function(size) {
-    for (let count = 0; count < size; count++)
+    for (let count = 0; count < size; count++){
       result += " _ ";
+    }
   };
 
   let mountain = function(size) {
     result += "/";
-    for (var count = 0; count < size; count++)
+    for (var count = 0; count < size; count++){
       result += " '";
+    }
     result += "\\";
   };
 
