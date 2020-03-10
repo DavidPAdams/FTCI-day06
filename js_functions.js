@@ -21,6 +21,8 @@ let withTotalGrat = function(amount){
 
 console.log("Your total including gratuity is: $" + withTotalGrat(billAmount).toFixed(2));
 
+
+
 //Exercise 2
 //Rock Paper Scissors
 
@@ -113,5 +115,51 @@ let playTournament = function(player1, player2, player3, player4, playUntil){
 }
 
 playTournament(player1, player2, player3, player4, 5);
+
+
+//Immediately Invoked Functional Expression (IIFE)
+//an anonymous function that is immediately executed
+(function(){
+  //variables and stuff to do with them
+})();
+
+
+//Scope
+let outer = function() {
+  let x = 'x';
+  let inner = function() {
+    let y = 'y';
+    console.log(x); //'x'
+  }
+  console.log(x); // 'x'
+  console.log(y); // ReferenceError: y is not defined
+}
+
+//more scope
+let landscape = function() {
+  let result = "";
+
+  let flat = function(size) {
+    for (let count = 0; count < size; count++)
+      result += " _ ";
+  };
+
+  let mountain = function(size) {
+    result += "/";
+    for (var count = 0; count < size; count++)
+      result += " '";
+    result += "\\";
+  };
+
+  flat(3);
+  mountain(4);
+  flat(6);
+  mountain(1);
+  flat(1);
+  return result;
+};
+
+console.log(landscape());
+
 
 
