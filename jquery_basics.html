@@ -1,0 +1,42 @@
+<!-- jQuery basics exercise -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+  </title>
+</head>
+<body>
+  <header>
+    <ul>
+      <li class="first">Item 1</li>
+      <li class="selected">Item 2</li>
+      <li class="last">Item 3</li>
+    </ul>
+  </header>
+  <div class="col">
+    <section>
+      <h2>Section 1</h2>
+    </section>
+    <section class="current">
+      <h2 class="highlight">Section 2</h2>
+    </section>
+    <section>
+      <h1>Section 3</h1>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    
+    $("header");
+    $("section").find("*");
+    let current = $(".current");
+    current.next();
+    current.prev().find("h2")[0];
+    $(".highlight").parent().parent();
+    let allH2 = Array.from($("section").find("h2"));
+
+  </script>
+</body>
+</html>
+
+
