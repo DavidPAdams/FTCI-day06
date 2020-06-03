@@ -1,3 +1,3 @@
 # JavaScript Functions and jQuery Intro
 
-Contains files for during class discussion, and exercises
+Contains files for discussion during class, and exercises from the lessons
