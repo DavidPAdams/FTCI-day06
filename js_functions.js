@@ -118,6 +118,9 @@ let playTournament = function(player1, player2, player3, player4, playUntil){
 
 playTournament(player1, player2, player3, player4, 5);
 
+
+
+
 //Interactive RPS:
 var hands = ['rock', 'paper', 'scissors'];
 var player = "";
@@ -125,6 +128,29 @@ var playerWins = 0;
 var computerWins = 0;
 var playerChoice = "";
 var computerChoice = "";
+
+let winner = function(arg, choice){
+  if(arg === "computer"){
+    computerWins += 1;
+    console.log("Too bad, so sad, "+capitalizeFirstLetter(arg)+"'s artifical intelligence wins with "+capitalizeFirstLetter(choice)+" over your "+capitalizeFirstLetter(playerChoice)+"!");
+  } else {
+    playerWins += 1;
+    console.log("Good for you! Your "+capitalizeFirstLetter(choice)+" prevails over the Computer's "+capitalizeFirstLetter(computerChoice)+"!");
+  }
+}
+
+let draw = function(){
+  console.log("It's a draw, each with "+capitalizeFirstLetter(playerChoice)+". Try again.");
+}
+
+let capitalizeFirstLetter = function(str) {
+  if(str.length > 0){
+    var first = str.charAt(0).toUpperCase();
+    return first + str.slice(1);
+  } else {
+    return str;
+  }
+}
 
 player = prompt("Welcome player, please enter your name:", "John").toLowerCase();
 
@@ -163,29 +189,6 @@ while(playerWins < 3 && computerWins < 3){
       break;
     default:
       break;
-  }
-}
-
-let winner = function(arg, choice){
-  if(arg === "computer"){
-    computerWins += 1;
-    console.log("Too bad, so sad, "+capitalizeFirstLetter(arg)+"'s artifical intelligence wins with "+capitalizeFirstLetter(choice)+" over your "+capitalizeFirstLetter(playerChoice)+"!");
-  } else {
-    playerWins += 1;
-    console.log("Good for you! Your "+capitalizeFirstLetter(choice)+" prevails over the Computer's "+capitalizeFirstLetter(computerChoice)+"!");
-  }
-}
-
-let draw = function(){
-  console.log("It's a draw, each with "+capitalizeFirstLetter(playerChoice)+". Try again.");
-}
-
-let capitalizeFirstLetter = function(str) {
-  if(str.length > 0){
-    var first = str.charAt(0).toUpperCase();
-    return first + str.slice(1);
-  } else {
-    return str;
   }
 }
 
