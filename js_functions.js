@@ -61,7 +61,9 @@ let playRound = function(onePlayer, twoPlayer){
   if(onePlayer.hand===twoPlayer.hand){
     console.log(`No winner, it is a tie with ${onePlayer.hand}`);
     return null;
-  } else if((onePlayer.hand==='Rock' && twoPlayer.hand==='Scissors') || (onePlayer.hand==='Paper' && twoPlayer.hand==='Rock') || (onePlayer.hand==='Scissors' && twoPlayer.hand==='paper')){
+  } else if((onePlayer.hand==='Rock' && twoPlayer.hand==='Scissors') || 
+            (onePlayer.hand==='Paper' && twoPlayer.hand==='Rock') || 
+            (onePlayer.hand==='Scissors' && twoPlayer.hand==='Paper')){
     onePlayer.wins += 1;
     console.log(`${onePlayer.name} wins with ${onePlayer.hand} over ${twoPlayer.name}\`s ${twoPlayer.hand}`);
     return onePlayer;
