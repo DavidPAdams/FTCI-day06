@@ -61,7 +61,7 @@ let playRound = function(onePlayer, twoPlayer){
   if(onePlayer.hand===twoPlayer.hand){
     console.log(`No winner, it is a tie with ${onePlayer.hand}`);
     return null;
-  } else if((onePlayer.hand==='rock' && twoPlayer.hand==='scissors') || (onePlayer.hand==='paper' && twoPlayer.hand==='rock') || (onePlayer.hand==='scissors' && twoPlayer.hand==='paper')){
+  } else if((onePlayer.hand==='Rock' && twoPlayer.hand==='Scissors') || (onePlayer.hand==='Paper' && twoPlayer.hand==='Rock') || (onePlayer.hand==='Scissors' && twoPlayer.hand==='paper')){
     onePlayer.wins += 1;
     console.log(`${onePlayer.name} wins with ${onePlayer.hand} over ${twoPlayer.name}\`s ${twoPlayer.hand}`);
     return onePlayer;
@@ -89,7 +89,7 @@ let playGame = function(playerA, playerB, playUntil){
 };
 
 //6.Play a game to 5 wins
-playGame(player1, player2, 5);
+// playGame(player1, player2, 5);
 
 //Bonus questions
 /*  Define a function called playTournament()
@@ -219,14 +219,14 @@ let landscape = function() {
 
   let flat = function(size) {
     for (let count = 0; count < size; count++){
-      result += " _ ";
+      result += "_";
     }
   };
 
   let mountain = function(size) {
     result += "/";
     for (var count = 0; count < size; count++){
-      result += " '";
+      result += "^";
     }
     result += "\\";
   };
